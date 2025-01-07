@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
-  //imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, ToastModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.scss'],
+  providers: [MessageService]
 })
 export class AppComponent {
-  title = 'angular_18_login_with_local_storage';
+  title = 'RAS_Calendar';
 }
